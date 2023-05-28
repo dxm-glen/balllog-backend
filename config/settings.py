@@ -29,15 +29,19 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-INSTALLED_APPS = [
+
+CUSTOM_APPS = [
+    'matches.apps.MatchesConfig'
+]
+SYSTEM_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'matches.apps.MatchesConfig'
+    'django.contrib.staticfiles',   
 ]
+INSTALLED_APPS = CUSTOM_APPS + SYSTEM_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
