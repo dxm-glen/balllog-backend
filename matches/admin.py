@@ -11,3 +11,4 @@ class MatchAdmin(admin.ModelAdmin):
         "type", "end_time",
     )
     search_fields = ("type",)
+    # list_editable = ("host_point", "guest_point",) #관리패널에서 바로 수정가능
